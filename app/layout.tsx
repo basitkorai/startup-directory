@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import localFont from 'next/font/local'
 import 'easymde/dist/easymde.min.css'
+import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
   title: 'YC Directory',
@@ -61,13 +62,12 @@ const workSans = localFont({
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={`${workSans.className} bg-gray-900 font-work-sans`}>
         {children}
+        <Toaster />
       </body>
     </html>
   )

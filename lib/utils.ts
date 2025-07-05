@@ -12,3 +12,15 @@ export function formatDate(date: string) {
     year: 'numeric',
   })
 }
+
+export function parseServerActionResponse<T>(response: T) {
+  return JSON.parse(JSON.stringify(response))
+}
+
+export function slugify(text: string): string {
+  return text
+    .toLowerCase() // Convert to lowercase
+    .trim() // Remove whitespace from both ends
+    .replace(/[\s\W-]+/g, '-') // Replace spaces and non-word characters with hyphens
+    .replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+}
