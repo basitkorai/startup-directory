@@ -83,7 +83,7 @@ const Startup = async ({ params }: { params: Promise<{ id?: string }> }) => {
 
             <p className="category-tag">{startup.category}</p>
           </div>
-          <h3 className="text-30-bold text-center">Pitch Details</h3>
+          <h3 className="text-30-bold ">Pitch Details</h3>
           {parsedContent ? (
             <article
               className="prose max-w-4xl font-work-sans"
@@ -94,7 +94,7 @@ const Startup = async ({ params }: { params: Promise<{ id?: string }> }) => {
           )}
         </div>
 
-        <hr className="divider" />
+        <hr className="divider my-7" />
 
         {startupsOfTheMonth?.length > 0 && (
           <div className="max-w-4xl mx-auto">
